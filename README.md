@@ -5,9 +5,11 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
+* Ruby version 3.4.1/ Rails 8
 
 * System dependencies
+    devise
+    
 
 * Configuration
 
