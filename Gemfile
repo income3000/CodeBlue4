@@ -16,6 +16,15 @@ gem "turbo-rails"
 gem "stimulus-rails"
 # Build JSON APIs with ease [https://github.com/rails/jbuilder]
 gem "jbuilder"
+# gem 'rack-cors', '~> 3.0'
+gem 'actiontext', '~> 8.0', '>= 8.0.2'
+# gem 'faraday', '~> 2.13', '>= 2.13.1'
+# gem 'doorkeeper', '~> 5.8', '>= 5.8.2'
+# gem 'bootstrap-sass', '~> 3.4', '>= 3.4.1'
+# gem 'ransack', '~> 4.3'
+# gem 'rails_admin', '~> 3.3'
+# gem 'omniauth', '~> 2.1', '>= 2.1.3'
+# gem 'omniauth-oauth2', '~> 1.8'
 
 # Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
 # gem "bcrypt", "~> 3.1.7"
@@ -61,3 +70,5 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
 end
+
+gem "simple_form", "~> 5.3"

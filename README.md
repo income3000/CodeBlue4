@@ -8,7 +8,7 @@ Things you may want to cover:
 * Ruby version 3.4.1/ Rails 8
 
 * System dependencies
-    devise
+    👍🏿rack-cors 👍🏿devise 👍🏿doorkeeper 👍🏿bootstrap 👍🏿actiontext 👍🏿faraday 👍🏿ransack 👍🏿railsadmin omniauth omniauth-google-auth2 omniauth-rails_csrf_protection
     
 
 * Configuration

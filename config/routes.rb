@@ -1,18 +1,21 @@
 Rails.application.routes.draw do
   devise_for :admin, controllers: {
-    sessions: 'admin/sessions',
-    registrations: 'admin/registrations'
+    sessions: "admin/sessions",
+    registrations: "admin/registrations"
   }
   devise_for :users, controllers: {
-    sessions: 'users/sessions',
-    registrations: 'users/registrations'
-  }  
-  resources :users
+    sessions: "user/sessions",
+    registrations: "user/registrations"
+  }
+
+  resources :conversations, only: [ :index, :create ] do
+    resources :messages, only: [ :index, :create ]
+  end
 
   get "upages/users"
   get "upages/admin"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
-root "page#home"
+  root "page#home"
 
   # Reveal health status on /up that returns 200 if the app boots with no exceptions, otherwise 500.
   # Can be used by load balancers and uptime monitors to verify that the app is live.
@@ -23,5 +26,4 @@ root "page#home"
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Defines the root path route ("/")
-
 end

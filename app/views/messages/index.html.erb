@@ -1,0 +1,15 @@
+<h1>Messages</h1>
+<div>
+  <% @messages.each do |message| %>
+    <p><strong><%= message.user.email %>:</strong> <%= message.body %></p>
+  <% end %>
+</div>
+
+<%= form_with model: [@conversation, @message], local: true do |form| %>
+  <div>
+    <%= form.text_area :body, placeholder: "Type your message..." %>
+  </div>
+  <div>
+   <%= form.submit "Send" %>
+  </div>
+<% end %>

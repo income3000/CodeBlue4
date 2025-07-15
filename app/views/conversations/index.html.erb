@@ -1,0 +1,6 @@
+<h1>Your Conversations</h1>
+<% @conversations.each do |conversation| %>
+  <p>
+    <%= link_to "Conversation with #{conversation.receiver_id == current_user.id ? conversation.sender.email : conversation.receiver.email}", conversation_messages_path(conversation) %>
+  </p>
+<% end %>
